@@ -1,4 +1,3 @@
-
 /** *****************************************************************************************
  *                                                                                          *
  * Plese read the following tutorial before implementing tasks:                             *
@@ -20,7 +19,7 @@
  *   '',  'bb'  => 'bb'
  */
 function concatenateStrings(value1, value2) {
-  throw new Error('Not implemented');
+  return value1 = value1 + value2;
 }
 
 /**
@@ -35,7 +34,7 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-  throw new Error('Not implemented');
+  return value = value.length;
 }
 
 /**
@@ -65,7 +64,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, John Doe!' => 'John Doe'
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
-function  extractNameFromTemplate(value) {
+function extractNameFromTemplate(value) {
   throw new Error('Not implemented');
 }
 
@@ -126,7 +125,7 @@ function repeatString(value, count) {
  *   'I like legends', 'end' => 'I like legs',
  *   'ABABAB','BA' => 'ABAB'
  */
-function removeFirstOccurrences(str, value)  {
+function removeFirstOccurrences(str, value) {
   throw new Error('Not implemented');
 }
 
