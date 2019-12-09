@@ -153,7 +153,7 @@ function unbracketTag(str) {
  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
  */
 function convertToUpperCase(str) {
- return str.toUpperCase();
+  return str.toUpperCase();
 }
 
 /**
