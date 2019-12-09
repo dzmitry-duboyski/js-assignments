@@ -33,7 +33,7 @@ function concatenateStrings(value1, value2) {
  *   ''      => 0
  */
 function getStringLength(value) {
-  return value.length;
+  return (value.length);
 }
 
 /**
@@ -124,10 +124,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-  return (
-    str.substring(0, str.indexOf(value)) +
-    str.substring(str.indexOf(value) + value.length, str.length)
-  );
+  return (str.substring(0, str.indexOf(value)) +str.substring(str.indexOf(value) + value.length, str.length));
 }
 
 /**
@@ -171,7 +168,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  throw new Error("Not implemented");
+  throw new Error('Not implemented');
 }
 
 /**
@@ -198,7 +195,7 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error("Not implemented");
+  throw new Error('Not implemented');
 }
 
 /**
@@ -218,7 +215,7 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  throw new Error("Not implemented");
+  throw new Error('Not implemented');
 }
 
 /**
@@ -235,7 +232,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  throw new Error("Not implemented");
+  throw new Error('Not implemented');
 }
 
 /**
@@ -263,7 +260,7 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  throw new Error("Not implemented");
+  throw new Error('Not implemented');
 }
 
 module.exports = {
