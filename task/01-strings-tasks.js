@@ -168,10 +168,6 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  /* let obj=[];
- if(str.indexOf(';')!=-1){
-   
- } else return obj=str; */
  throw new Error("Not implemented");
 }
 
