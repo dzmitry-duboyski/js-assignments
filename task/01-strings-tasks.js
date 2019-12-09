@@ -124,7 +124,10 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-  return ( str.substring(0, str.indexOf(value)) + str.substring(str.indexOf(value) + value.length, str.length) );
+  return (
+    str.substring(0, str.indexOf(value)) +
+    str.substring(str.indexOf(value) + value.length, str.length)
+  );
 }
 
 /**
@@ -168,7 +171,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
- throw new Error("Not implemented");
+  throw new Error("Not implemented");
 }
 
 /**
