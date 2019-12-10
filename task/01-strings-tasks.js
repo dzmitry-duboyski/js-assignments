@@ -64,7 +64,7 @@ function getStringFromTemplate(firstName, lastName) {
  *   'Hello, Chuck Norris!' => 'Chuck Norris'
  */
 function extractNameFromTemplate(value) {
-  return value.substring(7, value.length - 1);
+  return value.substring(7, value.length-1);
 }
 
 /**
@@ -124,7 +124,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-  return (str.substring(0, str.indexOf(value)) +str.substring(str.indexOf(value) + value.length, str.length));
+  return (str.replace(value, ''));
 }
 
 /**
@@ -168,7 +168,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  throw new Error('Not implemented');
+  return str.split(';');
 }
 
 /**
@@ -195,7 +195,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  throw new Error('Not implemented');
+  const str='┌┐└┘─ │';
+  return ((str[0]+str[4].repeat(width-2)+str[1]+'\n')+
+          (((str[6])+str[5].repeat(width-2)+(str[6])+'\n').repeat(height-2))+
+          (str[2]+str[4].repeat(width-2)+str[3]+'\n'));
 }
 
 /**
