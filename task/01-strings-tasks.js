@@ -198,8 +198,8 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  str='┌┐└┘─ │';
-  return ( result=(str[0]+str[4].repeat(width-2)+str[1]+'\n')+
+  let str='┌┐└┘─ │';
+  return ((str[0]+str[4].repeat(width-2)+str[1]+'\n')+
           (((str[6])+str[5].repeat(width-2)+(str[6])+'\n').repeat(height-2))+
           (str[2]+str[4].repeat(width-2)+str[3]+'\n'));
 }
