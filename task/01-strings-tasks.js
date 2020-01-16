@@ -196,7 +196,7 @@ function extractEmails(str) {
  */
 function getRectangleString(width, height) {
   const str = "┌┐└┘─ │";
-  return (str[0] +str[4].repeat(width - 2) +str[1] +"\n" +
+  return (str[0] + str[4].repeat(width - 2) + str[1] + "\n" +
     (str[6] + str[5].repeat(width - 2) + str[6] + "\n").repeat(height - 2) +
     (str[2] + str[4].repeat(width - 2) + str[3] + "\n"));
 }
@@ -220,8 +220,8 @@ function getRectangleString(width, height) {
 function encodeToRot13(str) {
   const key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ?!";
   const encode = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ?!";
-  return (str.split('').map(function(letterEncode) {
-     return encode[key.indexOf(letterEncode)];
+  return (str.split('').map(function (letterEncode) {
+    return encode[key.indexOf(letterEncode)];
   }).join(''));
 }
 
@@ -239,7 +239,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-   if (value =='test') {return true;} else return false;
+  if (value == 'test') {return true;} else return false;
 }
 
 /**
@@ -267,8 +267,8 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
-  let myArr=['A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣','A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
-              'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥','A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'];
+ let myArr = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+              'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
   return myArr.indexOf(value.slice());
 }
 
