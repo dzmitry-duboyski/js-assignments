@@ -124,7 +124,7 @@ function repeatString(value, count) {
  *   'ABABAB','BA' => 'ABAB'
  */
 function removeFirstOccurrences(str, value) {
-  return str.replace(value, "");
+  return str.replace(value, '');
 }
 
 /**
@@ -168,7 +168,7 @@ function convertToUpperCase(str) {
  *   'info@gmail.com' => ['info@gmail.com']
  */
 function extractEmails(str) {
-  return str.split(";");
+  return str.split(';');
 }
 
 /**
@@ -195,10 +195,10 @@ function extractEmails(str) {
  *
  */
 function getRectangleString(width, height) {
-  const str = "┌┐└┘─ │";
-  return (str[0] + str[4].repeat(width - 2) + str[1] + "\n" +
-    (str[6] + str[5].repeat(width - 2) + str[6] + "\n").repeat(height - 2) +
-    (str[2] + str[4].repeat(width - 2) + str[3] + "\n"));
+  const str = '┌┐└┘─ │';
+  return (str[0] + str[4].repeat(width - 2) + str[1] + '\n' +
+    (str[6] + str[5].repeat(width - 2) + str[6] + '\n').repeat(height - 2) +
+    (str[2] + str[4].repeat(width - 2) + str[3] + '\n'));
 }
 
 /**
@@ -218,8 +218,8 @@ function getRectangleString(width, height) {
  *
  */
 function encodeToRot13(str) {
-  const key = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ?!";
-  const encode = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ?!";
+  const key = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ?!';
+  const encode = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm ?!';
   return (str.split('').map(function (letterEncode) {
     return encode[key.indexOf(letterEncode)];
   }).join(''));
@@ -239,7 +239,7 @@ function encodeToRot13(str) {
  *   isString(new String('test')) => true
  */
 function isString(value) {
-  if (value == 'test') {return true;} else return false;
+  return Object.prototype.toString.call(value) === '[object String]';
 }
 
 /**
@@ -267,9 +267,9 @@ function isString(value) {
  *   'K♠' => 51
  */
 function getCardId(value) {
- let myArr = ['A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣', 'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-              'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥', 'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠'];
-  return myArr.indexOf(value.slice());
+  const arr = ['A234567891JQK', ' ♣♦♥♠'];
+  const b = arr[1].indexOf(value[value.length-1]);
+  return ((13*b-1)+(arr[0].indexOf(value[0])-12));
 }
 
 module.exports = {
