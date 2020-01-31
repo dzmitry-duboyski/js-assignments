@@ -266,10 +266,11 @@ function isString(value) {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
+//Я не уверен, что это самое лучшее решение
 function getCardId(value) {
   const arr = ['A234567891JQK', ' ♣♦♥♠'];
-  const b = arr[1].indexOf(value[value.length-1]);
-  return ((13*b-1)+(arr[0].indexOf(value[0])-12));
+  const b = arr[1].indexOf(value[value.length - 1]);
+  return ((13 * b - 1) + (arr[0].indexOf(value[0]) - 12)); //(13*масть-1)+(карта-12)
 }
 
 module.exports = {
